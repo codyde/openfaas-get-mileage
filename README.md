@@ -19,16 +19,16 @@ curl http://openfaas.url.com/function/get-mileage -d '[{
         "start": "Sacramento Train Museum",
         "end": "BJs Brewery Roseville Ca"
     }]'
-{u'date': u'10/4', u'start': u'641 Oakborough Ave Roseville Ca', u'end': u'California natural resources agency'}
-{u'date': u'10/4', u'start': u'California natural resources agency', u'end': u'641 Oakborough Ave Roseville Ca'}
-{u'date': u'10/5', u'start': u'641 Oakborough Ave Roseville ca', u'end': u'1416 ninth street sacramento ca'}
-+------+----------------------------------------------+----------------------------------------------+----------------+
-| Date |                Starting Point                |                 Ending Point                 | Miles Traveled |
-+------+----------------------------------------------+----------------------------------------------+----------------+
-| 10/4 | 641 Oakborough Ave, Roseville, CA 95747, USA | 1416 9th St  1311, Sacramento, CA 95814, USA |    19.5 mi     |
-| 10/4 | 1416 9th St  1311, Sacramento, CA 95814, USA | 641 Oakborough Ave, Roseville, CA 95747, USA |    22.9 mi     |
-| 10/5 | 641 Oakborough Ave, Roseville, CA 95747, USA |    1416 9th St, Sacramento, CA 95814, USA    |    19.5 mi     |
-+------+----------------------------------------------+----------------------------------------------+----------------+
+{u'date': u'10/4', u'start': u'Roseville, Ca', u'end': u'Disneyland, Ca'}
+{u'date': u'10/4', u'start': u'Roseville, Ca', u'end': u'Sacramento, Ca'}
+{u'date': u'10/4', u'start': u'Sacramento Train Museum', u'end': u'BJs Brewery Roseville Ca'}
++------+-----------------------------------------+-----------------------------------------------+----------------+
+| Date |              Starting Point             |                  Ending Point                 | Miles Traveled |
++------+-----------------------------------------+-----------------------------------------------+----------------+
+| 10/4 |            Roseville, CA, USA           |   1313 Disneyland Dr, Anaheim, CA 92802, USA  |     429 mi     |
+| 10/4 |            Roseville, CA, USA           |              Sacramento, CA, USA              |    18.8 mi     |
+| 10/4 | 125 I Street, Sacramento, CA 95814, USA | 1200 Roseville Pkwy, Roseville, CA 95678, USA |    23.1 mi     |
++------+-----------------------------------------+-----------------------------------------------+----------------+
 ```
 
 ## Requirements: 
