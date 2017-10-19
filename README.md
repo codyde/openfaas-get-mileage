@@ -6,7 +6,7 @@
 ## Example Output
 
 ```bash
-curl http://functions.humblelab.com/function/get-mileage -d '[
+curl http://openfaas.url.com/function/get-mileage -d '[
 {
 "date": "10/4",
 "start": "641 Oakborough Ave Roseville Ca",
