@@ -35,7 +35,7 @@ Review https://developers.google.com/maps/documentation/distance-matrix/intro fo
 
 Switch from Miles to Kilometers by modifying the following block within handler.py from 
 
-```json
+```python
 payload = {
             'origins' : '|'.join(origins),
             'destinations' : '|'.join(destinations), 
@@ -46,7 +46,7 @@ payload = {
 ```
 to 
 
-```json
+```python
 payload = {
             'origins' : '|'.join(origins),
             'destinations' : '|'.join(destinations), 
