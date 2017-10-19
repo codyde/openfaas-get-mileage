@@ -1,0 +1,11 @@
+provider:  
+  name: faas
+  gateway: http://openfaas.url.com
+
+functions: 
+  get-mileage:
+    lang: python
+    handler: ./get-mileage
+    image: YOURREPO/get-mileage
+    environment:
+      gm_apikey: YOUR GOOGLE MAP API KEY
