@@ -1,8 +1,41 @@
-## OpenFaaS function for calling Google Map Distance API
+# OpenFaaS function for calling Google Map Distance API
 
+* Platform - Written for use with the [OpenFaaS](https://github.com/openfaas/faas) function as a service platform, across all container schedulers (Docker Swarm/Kubernetes)
 * Language - Written for Python3 
 
-# Requirements: 
+## Example Output
+
+```bash
+curl http://functions.humblelab.com/function/get-mileage -d '[
+{
+"date": "10/4",
+"start": "641 Oakborough Ave Roseville Ca",
+"end": "California natural resources agency"
+},
+{
+"date": "10/4",
+"start": "California natural resources agency",
+"end": "641 Oakborough Ave Roseville Ca"
+},
+{
+"date": "10/5",
+"start": "641 Oakborough Ave Roseville ca",
+"end": "1416 ninth street sacramento ca"
+}]
+'
+{u'date': u'10/4', u'start': u'641 Oakborough Ave Roseville Ca', u'end': u'California natural resources agency'}
+{u'date': u'10/4', u'start': u'California natural resources agency', u'end': u'641 Oakborough Ave Roseville Ca'}
+{u'date': u'10/5', u'start': u'641 Oakborough Ave Roseville ca', u'end': u'1416 ninth street sacramento ca'}
++------+----------------------------------------------+----------------------------------------------+----------------+
+| Date |                Starting Point                |                 Ending Point                 | Miles Traveled |
++------+----------------------------------------------+----------------------------------------------+----------------+
+| 10/4 | 641 Oakborough Ave, Roseville, CA 95747, USA | 1416 9th St  1311, Sacramento, CA 95814, USA |    19.5 mi     |
+| 10/4 | 1416 9th St  1311, Sacramento, CA 95814, USA | 641 Oakborough Ave, Roseville, CA 95747, USA |    22.9 mi     |
+| 10/5 | 641 Oakborough Ave, Roseville, CA 95747, USA |    1416 9th St, Sacramento, CA 95814, USA    |    19.5 mi     |
++------+----------------------------------------------+----------------------------------------------+----------------+
+```
+
+## Requirements: 
 * Google Maps Distance Matrix API Key (https://developers.google.com/maps/documentation/distance-matrix/intro) 
 * Edit stack-example.yml to include API key in environment variables (or create an environment.yml file and use that) 
 * Edit stack-example.yml to include your Docker Hub repository 
@@ -30,12 +63,12 @@ The expected format for travel details is follows... (python list is expected)
 ]
 ```
 
-# Features 
+## Features 
 
 * Utilizes Google API's to make calls. Able to resolve text entries into logical addresses. 
 * Returns date, source address, detination address, and mileage. 
 
-# Modifications 
+## Modifications 
 
 Review https://developers.google.com/maps/documentation/distance-matrix/intro for details 
 
