@@ -10,6 +10,7 @@
 
 The expected format for travel details is follows... (python list is expected) 
 
+```python
 [
     {
         "date": "10/4",
@@ -27,6 +28,7 @@ The expected format for travel details is follows... (python list is expected)
         "end": "BJs Brewery Roseville Ca"
     }
 ]
+```
 
 # Features 
 
