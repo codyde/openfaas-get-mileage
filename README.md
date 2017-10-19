@@ -1,8 +1,12 @@
 ## OpenFaaS function for calling Google Map Distance API
 
+* Language - Written for Python3 
 
 # Requirements: 
-You'll need to get a Google Maps Distance Matrix API Key from here https://developers.google.com/maps/documentation/distance-matrix/intro and include that in your environment variables within the stack-example.yml file 
+* Google Maps Distance Matrix API Key (https://developers.google.com/maps/documentation/distance-matrix/intro) 
+* Edit stack-example.yml to include API key in environment variables (or create an environment.yml file and use that) 
+* Edit stack-example.yml to include your Docker Hub repository 
+* Push to OpenFaaS
 
 The expected format for travel details is follows... (python list is expected) 
 
