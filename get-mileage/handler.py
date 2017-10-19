@@ -7,15 +7,11 @@ def handle(st):
     traveldata = PrettyTable(['Date','Starting Point','Ending Point','Miles Traveled'])
     j = json.loads(st)
     for i in j:
-	origins = []
-        origins.append(i['start'])
-	destinations = []
-        destinations.append(i['end'])
-        api_key = os.environ['gm_apikey']
+	    api_key = os.environ['gm_apikey']
         base_url = 'https://maps.googleapis.com/maps/api/distancematrix/json?'
         payload = {
-            'origins' : '|'.join(origins),
-            'destinations' : '|'.join(destinations), 
+            'origins' : '|'.join([i['start']]),
+            'destinations' : '|'.join([i['end']]), 
             'mode' : 'driving',
             'units': 'imperial',
             'api_key' : api_key
